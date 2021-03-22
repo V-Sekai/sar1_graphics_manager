@@ -152,33 +152,37 @@ func assign_save_settings_funcref(p_instance: Object, p_function: String) -> voi
 	
 func _ready():
 	# Antialiasing
-	msaa =\
-	ProjectSettings.get_setting("rendering/quality/filters/msaa")
+	if typeof(ProjectSettings.get_setting("rendering/quality/filters/msaa")) != TYPE_NIL:
+		msaa =\
+		ProjectSettings.get_setting("rendering/quality/filters/msaa")
 	
 	#Shadows 
-	shadow_atlas_size =\
-	ProjectSettings.get_setting("rendering/quality/shadow_atlas/size")
-	shadow_atlas_quad_3 =\
-	ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_3_subdiv")
-	shadow_atlas_quad_2 =\
-	ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_2_subdiv")
-	shadow_atlas_quad_1 =\
-	ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_1_subdiv")
-	shadow_atlas_quad_0 =\
-	ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_0_subdiv")
-	shadow_filter_mode =\
-	ProjectSettings.get_setting("rendering/quality/shadows/filter_mode")
+	if typeof(ProjectSettings.get_setting("rendering/quality/shadow_atlas/size")) != TYPE_NIL:
+		shadow_atlas_size =\
+		ProjectSettings.get_setting("rendering/quality/shadow_atlas/size")
+		shadow_atlas_quad_3 =\
+		ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_3_subdiv")
+		shadow_atlas_quad_2 =\
+		ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_2_subdiv")
+		shadow_atlas_quad_1 =\
+		ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_1_subdiv")
+		shadow_atlas_quad_0 =\
+		ProjectSettings.get_setting("rendering/quality/shadow_atlas/quadrant_0_subdiv")
+		shadow_filter_mode =\
+		ProjectSettings.get_setting("rendering/quality/shadows/filter_mode")
 	
 	# Subsurface scattering
-	sss_follow_surface =\
-	ProjectSettings.get_setting("rendering/quality/subsurface_scattering/follow_surface")
-	sss_weight_samples =\
-	ProjectSettings.get_setting("rendering/quality/subsurface_scattering/weight_samples")
-	sss_quality =\
-	ProjectSettings.get_setting("rendering/quality/subsurface_scattering/quality")
-	sss_scale =\
-	ProjectSettings.get_setting("rendering/quality/subsurface_scattering/scale")
+	if typeof(ProjectSettings.get_setting("rendering/quality/subsurface_scattering/follow_surface")) != TYPE_NIL:
+		sss_follow_surface =\
+		ProjectSettings.get_setting("rendering/quality/subsurface_scattering/follow_surface")
+		sss_weight_samples =\
+		ProjectSettings.get_setting("rendering/quality/subsurface_scattering/weight_samples")
+		sss_quality =\
+		ProjectSettings.get_setting("rendering/quality/subsurface_scattering/quality")
+		sss_scale =\
+		ProjectSettings.get_setting("rendering/quality/subsurface_scattering/scale")
 	
 	# Voxel cone tracing
-	vct_high =\
-	ProjectSettings.get_setting("rendering/quality/voxel_cone_tracing/high_quality")
+	if typeof(ProjectSettings.get_setting("rendering/quality/voxel_cone_tracing/high_quality")) != TYPE_NIL:
+		vct_high =\
+		ProjectSettings.get_setting("rendering/quality/voxel_cone_tracing/high_quality")
